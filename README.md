@@ -22,9 +22,25 @@
 
 ![](https://github-contributor-stats.vercel.app/api?username=grzkyl&limit=5&theme=dark&combine_all_yearly_contributions=true)
 
----
-
 [![](https://visitcount.itsvg.in/api?id=grzkyl&icon=0&color=0)](https://visitcount.itsvg.in)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grzkyl/grzkyl/output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grzkyl/grzkyl/output/pacman-contribution-graph.svg">
+  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/grzkyl/grzkyl/output/pacman-contribution-graph.svg">
+</picture>
+
+###
+
+<img src="https://raw.githubusercontent.com/grzkyl/grzkyl/output/snake.svg" alt="Snake animation" />
+
+###
+
+<div align="center">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=grzkyl.grzkyl&"  />
+</div>
+
+###
 
 <!--
 **grzkyl/grzkyl** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
