@@ -29,12 +29,12 @@ def get_contributions(username: str) -> int:
 
 
 def calc_level(contributions: int) -> int:
-    """Level naik tiap 200 contributions, maksimal 99."""
+    
     return min(contributions // 200 + 1, 99)
 
 
 def fill_svg(username: str, contributions: int, level: int):
-    """Replace placeholder di pixel-card.svg."""
+  
     with open("pixel-card.svg", "r", encoding="utf-8") as f:
         content = f.read()
 
