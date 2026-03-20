@@ -1,21 +1,15 @@
-#!/usr/bin/env python3
-"""
-Script untuk fetch data GitHub dan update pixel-card.svg secara otomatis.
-Dijalankan oleh GitHub Actions setiap hari.
-"""
 
 import os
 import re
 import urllib.request
 import json
 
-# ==================== CONFIG ====================
 GITHUB_USERNAME = os.environ.get("GITHUB_USERNAME", "grzkyl")
 GITHUB_TOKEN = os.environ.get("GH_TOKEN", "")
 
-SVG_TEMPLATE    = "pixel-card.svg"   # file SVG di root repo
-SVG_OUTPUT      = "pixel-card.svg"   # output (sama, overwrite)
-# ================================================
+SVG_TEMPLATE    = "pixel-card.svg"   
+SVG_OUTPUT      = "pixel-card.svg"   
+
 
 
 def get_contributions(username: str, token: str) -> int:
