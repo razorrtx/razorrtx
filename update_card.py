@@ -4,7 +4,7 @@ import re
 import urllib.request
 import json
 
-GITHUB_USERNAME = os.environ.get("GITHUB_USERNAME", "grzkyl")
+GITHUB_USERNAME = os.environ.get("GITHUB_USERNAME", "razorrtx")
 GITHUB_TOKEN = os.environ.get("GH_TOKEN", "")
 
 SVG_TEMPLATE    = "pixel-card.svg"   
