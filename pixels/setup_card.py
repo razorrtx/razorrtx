@@ -1,39 +1,20 @@
-#!/usr/bin/env python3
-"""
-Jalankan sekali di laptop untuk ngisi pixel-card.svg dengan data GitHub kamu.
-Tidak perlu token untuk contributions publik!
-
-Cara pakai:
-  1. Pastikan pixel-card.svg ada di folder yang sama dengan script ini
-  2. Ganti USERNAME di bawah dengan username GitHub kamu
-  3. Jalankan: python setup_card.py
-"""
-
 import urllib.request
 import json
 import re
 
-# ============================================================
-#  GANTI INI DENGAN USERNAME GITHUB KAMU
-USERNAME = "grzkyl"
-# ============================================================
+
+USERNAME = "razorrtx"
+
 
 
 def get_contributions(username: str) -> int:
-    """
-    Ambil total contributions tahun ini.
-    Pakai GitHub GraphQL — butuh token kalau mau akurat.
-    Fallback: hitung dari public events (tidak perlu token).
-    """
     try:
-        # Coba ambil lewat public profile (scrape contribution count)
+       
         url = f"https://github.com/users/{username}/contributions"
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
         with urllib.request.urlopen(req, timeout=10) as resp:
             html = resp.read().decode("utf-8")
 
-        # Cari total contributions dari HTML
-        # Format: data-count="1755"
         matches = re.findall(r'data-count="(\d+)"', html)
         if matches:
             total = sum(int(x) for x in matches)
@@ -41,7 +22,7 @@ def get_contributions(username: str) -> int:
     except Exception as e:
         print(f"[WARN] Tidak bisa fetch contributions: {e}")
 
-    # Fallback manual — kamu isi sendiri
+   
     print("[INFO] Tidak bisa otomatis. Buka github.com/USERNAME dan lihat angka contributions di profil.")
     manual = input("  Masukkan jumlah contributions kamu: ").strip()
     return int(manual) if manual.isdigit() else 0
