@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 130" width="220" height="130">
+  <defs>
+    <style>
+      .star1 { animation: twinkle 2s infinite; }
+      .star2 { animation: twinkle 2.5s infinite 0.7s; }
+      .star3 { animation: twinkle 1.8s infinite 1.2s; }
+      .star4 { animation: twinkle 3s infinite 0.3s; }
+      @keyframes twinkle {
+        0%,100% { opacity: 0.15; }
+        50%      { opacity: 1; }
+      }
+
+      .nameplate { animation: glow 2.5s ease-in-out infinite alternate; }
+      @keyframes glow {
+        0%   { filter: drop-shadow(0 0 2px #58a6ff44); }
+        100% { filter: drop-shadow(0 0 6px #58a6ffaa); }
+      }
+
+      /* Penguin jalan kiri ke kanan lalu balik */
+      .penguin-group {
+        animation: walk-lr 10s linear infinite;
+      }
+      @keyframes walk-lr {
+        0%   { transform: translateX(10px)  scaleX(1); }
+        45%  { transform: translateX(165px) scaleX(1); }
+        47%  { transform: translateX(168px) scaleX(-1); }
+        92%  { transform: translateX(10px)  scaleX(-1); }
+        94%  { transform: translateX(8px)   scaleX(1); }
+        100% { transform: translateX(10px)  scaleX(1); }
+      }
+
+      /* Shadow ikut penguin */
+      .shadow-el {
+        animation: shadow-lr 10s linear infinite;
+      }
+      @keyframes shadow-lr {
+        0%   { transform: translateX(10px); }
+        45%  { transform: translateX(165px); }
+        47%  { transform: translateX(168px); }
+        92%  { transform: translateX(10px); }
+        94%  { transform: translateX(8px); }
+        100% { transform: translateX(10px); }
+      }
+
+      /* Kaki kiri dan kanan bergantian */
+      .leg-l {
+        animation: step-l 0.38s ease-in-out infinite alternate;
+        transform-box: fill-box;
+        transform-origin: 50% 0%;
+      }
+      .leg-r {
+        animation: step-r 0.38s ease-in-out infinite alternate;
+        transform-box: fill-box;
+        transform-origin: 50% 0%;
+      }
+      @keyframes step-l {
+        0%   { transform: rotate(-18deg) translateY(0px); }
+        100% { transform: rotate(10deg)  translateY(2px); }
+      }
+      @keyframes step-r {
+        0%   { transform: rotate(10deg)  translateY(2px); }
+        100% { transform: rotate(-18deg) translateY(0px); }
+      }
+
+      /* Sayap ayun */
+      .wing-l {
+        animation: wing-swing 0.38s ease-in-out infinite alternate;
+        transform-box: fill-box;
+        transform-origin: 100% 0%;
+      }
+      .wing-r {
+        animation: wing-swing-r 0.38s ease-in-out infinite alternate;
+        transform-box: fill-box;
+        transform-origin: 0% 0%;
+      }
+      @keyframes wing-swing {
+        0%   { transform: rotate(8deg); }
+        100% { transform: rotate(-8deg); }
+      }
+      @keyframes wing-swing-r {
+        0%   { transform: rotate(-8deg); }
+        100% { transform: rotate(8deg); }
+      }
+
+      /* Kedip mata */
+      .eye-grp {
+        animation: blink 4.5s infinite;
+        transform-box: fill-box;
+        transform-origin: 50% 50%;
+      }
+      @keyframes blink {
+        0%,87%,100% { transform: scaleY(1); }
+        91%          { transform: scaleY(0.05); }
+      }
+
+      /* Body bobbing naik-turun saat jalan */
+      .body-grp {
+        animation: bob 0.38s ease-in-out infinite alternate;
+        transform-box: fill-box;
+        transform-origin: 50% 100%;
+      }
+      @keyframes bob {
+        0%   { transform: translateY(0px); }
+        100% { transform: translateY(-2px); }
+      }
+    </style>
+  </defs>
+
+  <!-- BACKGROUND -->
+  <rect width="220" height="130" rx="8" fill="#0d1117"/>
+
+  <!-- Ground -->
+  <rect x="8"  y="114" width="204" height="1"  fill="#21262d"/>
+  <rect x="8"  y="115" width="204" height="9"  fill="#161b22" rx="0"/>
+
+  <!-- Stars -->
+  <rect class="star1" x="10"  y="74" width="2" height="2" fill="#ffffff"/>
+  <rect class="star2" x="200" y="70" width="3" height="3" fill="#ffffff"/>
+  <rect class="star3" x="22"  y="89" width="2" height="2" fill="#aaaaff"/>
+  <rect class="star4" x="192" y="84" width="2" height="2" fill="#aaaaff"/>
+  <rect class="star2" x="9"   y="60" width="2" height="2" fill="#ffffff"/>
+  <rect class="star1" x="207" y="58" width="2" height="2" fill="#ffffff"/>
+
+  <!-- NAMEPLATE -->
+  <rect class="nameplate" x="38" y="5" width="144" height="34" rx="4" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="110" y="16" font-family="monospace" font-size="7" font-weight="bold" fill="#58a6ff" text-anchor="middle" dominant-baseline="middle">grzkyl</text>
+  <text x="110" y="28" font-family="monospace" font-size="5.2" fill="#8b949e" text-anchor="middle" dominant-baseline="middle">contributions: 48</text>
+
+  <!-- Level badge -->
+  <rect x="80" y="43" width="60" height="13" rx="3" fill="#21262d" stroke="#30363d" stroke-width="0.5"/>
+  <text x="110" y="49.5" font-family="monospace" font-size="5.5" fill="#f0e68c" text-anchor="middle" dominant-baseline="middle">Lv 1 &#9733;</text>
+
+  <!-- SHADOW -->
+  <g class="shadow-el">
+    <ellipse cx="20" cy="115" rx="13" ry="3" fill="#000000" opacity="0.4"/>
+  </g>
+
+  <!-- PENGUIN (pivot di tengah karakter ~x=20) -->
+  <g class="penguin-group">
+
+    <!-- Sayap kiri -->
+    <g class="wing-l">
+      <rect x="7"  y="76" width="7"  height="12" rx="2" fill="#2d333b"/>
+      <rect x="6"  y="78" width="5"  height="9"  rx="1" fill="#3d444d"/>
+    </g>
+
+    <!-- Sayap kanan -->
+    <g class="wing-r">
+      <rect x="26" y="76" width="7"  height="12" rx="2" fill="#2d333b"/>
+      <rect x="29" y="78" width="5"  height="9"  rx="1" fill="#3d444d"/>
+    </g>
+
+    <!-- BODY + HEAD (bobbing) -->
+    <g class="body-grp">
+      <!-- Kepala -->
+      <rect x="12" y="60" width="16" height="14" rx="3" fill="#1f2328"/>
+      <!-- Body atas -->
+      <rect x="10" y="72" width="20" height="10" fill="#1f2328"/>
+      <!-- Body tengah -->
+      <rect x="10" y="82" width="20" height="8"  fill="#1f2328"/>
+      <!-- Body bawah -->
+      <rect x="12" y="90" width="16" height="6"  fill="#1f2328"/>
+
+      <!-- Belly putih -->
+      <rect x="14" y="73" width="12" height="8"  fill="#e6edf3"/>
+      <rect x="14" y="81" width="12" height="7"  fill="#e6edf3"/>
+      <rect x="15" y="88" width="10" height="4"  fill="#e6edf3"/>
+
+      <!-- Mata kiri -->
+      <g class="eye-grp">
+        <rect x="13" y="62" width="5" height="5" fill="#e6edf3"/>
+        <rect x="14" y="63" width="3" height="3" fill="#0d1117"/>
+        <rect x="14" y="63" width="1" height="1" fill="#ffffff" opacity="0.9"/>
+        <!-- Mata kanan -->
+        <rect x="22" y="62" width="5" height="5" fill="#e6edf3"/>
+        <rect x="23" y="63" width="3" height="3" fill="#0d1117"/>
+        <rect x="23" y="63" width="1" height="1" fill="#ffffff" opacity="0.9"/>
+      </g>
+
+      <!-- Paruh -->
+      <rect x="18" y="69" width="4" height="2" fill="#ff8c00"/>
+      <rect x="17" y="71" width="6" height="2" fill="#e67300"/>
+    </g>
+
+    <!-- Kaki kiri -->
+    <g class="leg-l">
+      <rect x="12" y="96"  width="7" height="5"  fill="#ff8c00"/>
+      <rect x="10" y="101" width="6" height="3"  fill="#ff8c00"/>
+    </g>
+
+    <!-- Kaki kanan -->
+    <g class="leg-r">
+      <rect x="21" y="96"  width="7" height="5"  fill="#ff8c00"/>
+      <rect x="23" y="101" width="6" height="3"  fill="#ff8c00"/>
+    </g>
+
+  </g>
+
+</svg>
