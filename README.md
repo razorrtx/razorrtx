@@ -21,7 +21,7 @@
     <img src="https://img.shields.io/badge/Go-00add8?logo=go&logoColor=white" />
     <img src="https://img.shields.io/badge/Python-3776ab?logo=python&logoColor=white" />
     <img src="https://img.shields.io/badge/React-61dafb?logo=react&logoColor=black" />
-    <img src="https://img.shields.io/badge/Next.js-000000?logo=next.js&logoColor=white" />
+    <img src="https://img.shields.io/badge/Next.js-808080?logo=next.js&logoColor=white" />
     <img src="https://img.shields.io/badge/PostgreSQL-4169e1?logo=postgresql&logoColor=white" />
     <img src="https://img.shields.io/badge/MySQL-4479a1?logo=mysql&logoColor=white" />
     <img src="https://img.shields.io/badge/Dart-0175c2?logo=dart&logoColor=white" />
