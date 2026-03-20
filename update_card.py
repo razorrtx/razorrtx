@@ -11,7 +11,7 @@ import json
 
 # ==================== CONFIG ====================
 GITHUB_USERNAME = os.environ.get("GITHUB_USERNAME", "grzkyl")
-GITHUB_TOKEN    = os.environ.get("GITHUB_TOKEN", "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")
+GITHUB_TOKEN = os.environ.get("GH_TOKEN", "")
 
 SVG_TEMPLATE    = "pixel-card.svg"   # file SVG di root repo
 SVG_OUTPUT      = "pixel-card.svg"   # output (sama, overwrite)
