@@ -3,7 +3,7 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=26&duration=4000&pause=1000&color=4ADE80&center=true&vCenter=true&width=700&lines=Selamat+Datang+Bosquh;Saya+Razor+%2C+Salam+Kenal+Semuanya;)](https://git.io/typing-svg)
 <div>
   <span style="color:#FACC15">
-    <i><b>Jarpis, Tulong Diapakan Dulu Apa Itu Biar Gak Apa Kali !!</i>
+    <i><b>Jarpis, Tolong Diapakan Dulu Apa Itu Biar Gak Apa Kali !!</i>
   </span>
 </div>
 
